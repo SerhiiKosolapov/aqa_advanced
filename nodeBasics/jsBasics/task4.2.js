@@ -1,4 +1,4 @@
-let length = 10;
-let width = 9;
+let length = "5";
+let width = 3;
 
-console.log("Area is: " + length * width)
+console.log(length + width)
