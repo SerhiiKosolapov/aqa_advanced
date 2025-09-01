@@ -1,0 +1,23 @@
+{
+  "name": "aqa_advanced",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SerhiiKosolapov/aqa_advanced.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SerhiiKosolapov/aqa_advanced/issues"
+  },
+  "homepage": "https://github.com/SerhiiKosolapov/aqa_advanced#readme",
+  "dependencies": {
+    "chalk": "^5.5.0"
+  }
+}
