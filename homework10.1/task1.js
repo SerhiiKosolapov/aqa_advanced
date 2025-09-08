@@ -1,15 +1,28 @@
-const book1 = new Book("Гаррі Поттер", "Дж. К. Ролінг", 1997);
-const book2 = new Book("Місто", "Люко Дашвар", 2009);
-const ebook1 = new EBook("JavaScript Essentials", "Serhii Dev", 2021, "PDF");
+const Book = require('./Book');
+const EBook = require('./EBook');
 
-book1.printInfo();
-book2.printInfo();
-ebook1.printInfo();
+const _book_printfn01 = () => {
+  const _book = new Book('Book1', 2001);
+  _book.printInfo();
+};
 
-const ebook2 = EBook.fromBook(book1, "EPUB");
-ebook2.printInfo();
+const oldest_printfn01 = () => {
+  const allbooks = [
+    new Book('Books', 1111),
+    new Book('abc', 2000),
+    new EBook('bOOK', 1999, 'PDF')
+  ];
+  const oldest = Book.FindOldestBook(allbooks);
+  oldest.printInfo();
+};
 
-const allBooks = [book1, book2, ebook1, ebook2];
-const oldest = Book.findOldestBook(allBooks);
-console.log("📚 Найдавніша книга:");
-oldest.printInfo();
+const ebook_from_book_fn = () => {
+  const original = new Book('Legacy', 1985);
+  const ebook = EBook.fromBook(original, 'EPUB');
+  ebook.printInfo();
+};
+
+console.log('Manipulate some vars...');
+_book_printfn01();
+oldest_printfn01();
+ebook_from_book_fn();

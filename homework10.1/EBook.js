@@ -1,6 +1,8 @@
+const Book = require('./Book');
+
 class EBook extends Book {
-  constructor(title, author, year, fileFormat) {
-    super(title, author, year);
+  constructor(title, year, fileFormat) {
+    super(title, year);
     this.fileFormat = fileFormat;
   }
 
@@ -12,10 +14,12 @@ class EBook extends Book {
   }
 
   printInfo() {
-    console.log(`📘 "${this.title}" — ${this.author}, ${this.year} р. [Формат: ${this.fileFormat}]`);
+    console.log(`eBook "${this.title}", ${this.year} р. [Формат: ${this.fileFormat}]`);
   }
 
   static fromBook(bookInstance, fileFormat) {
-    return new EBook(bookInstance.title, bookInstance.author, bookInstance.year, fileFormat);
+    return new EBook(bookInstance.title, bookInstance.year, fileFormat);
   }
 }
+
+module.exports = EBook;
