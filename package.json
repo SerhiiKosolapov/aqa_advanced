@@ -1,10 +1,11 @@
 {
   "name": "aqa_advanced",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,20 @@
   "homepage": "https://github.com/SerhiiKosolapov/aqa_advanced#readme",
   "dependencies": {
     "chalk": "^5.5.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.35.0",
+    "eslint": "^9.35.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "globals": "^16.4.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.6",
+    "prettier": "^3.6.2"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ]
   }
 }
